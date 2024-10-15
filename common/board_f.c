@@ -183,6 +183,10 @@ __weak int dram_init_banksize(void)
 	gd->bd->bi_dram[0].size = get_effective_memsize();
 #endif
 
+#if CONFIG_NR_DRAM_BANKS > 1
+	gd->bd->bi_dram[1].start = PHYS_SDRAM_2;
+	gd->bd->bi_dram[1].size = PHYS_SDRAM_2_SIZE;
+#endif
 	return 0;
 }
 

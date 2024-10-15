@@ -85,4 +85,10 @@ config STI_USB_PHY
 	  used by USB2 and USB3 Host controllers available on
 	  STiH407 SoC families.
 
+config MOTORCOMM_YT
+        bool "motorcomm yt8511/yt8521 phy"
+        default n
+        help
+          delay
+
 endmenu
